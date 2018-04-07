@@ -1,0 +1,7 @@
+<div class="container">
+  <ul>
+    <% @musics.each do |id, music| %>
+      <li><%= music[:track] %> (<%= music[:author] %>)</li>
+    <% end %>
+  </ul>
+</div>
