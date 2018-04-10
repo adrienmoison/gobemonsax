@@ -7,7 +7,7 @@
 
   <ul>
     <% @musics.each do |id, music| %>
-      <li><%= music[:track] %> (<%= music[:author] %>)</li>
+      <li><%= link_to music[:track], music_path(id) %></li>
     <% end %>
   </ul>
 </div>
