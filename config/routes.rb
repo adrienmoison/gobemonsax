@@ -1,8 +1,6 @@
 Rails.application.routes.draw do
   get 'about', to: 'pages#about', as: :about
   get 'contact', to: 'pages#contact', as: :contact
-  get 'home', to: 'pages#home', as: :home
-  get 'musics', to: 'musics#index'
 
   root to: 'pages#home'
 
