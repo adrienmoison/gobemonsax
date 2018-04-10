@@ -3,6 +3,8 @@ Rails.application.routes.draw do
   get 'contact', to: 'pages#contact', as: :contactgit
 
   get 'musics', to: 'musics#index'
+  post 'musics', to: 'musics#create'
+  get 'musics/:id', to: 'musics#show'
 
   root to: 'pages#home'
 

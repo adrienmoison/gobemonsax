@@ -8,8 +8,20 @@ class MusicsController < ApplicationController
   }
 
   def index
-    @musics = MUSICS.select do |id, music|
-      music[:category] == params[:style]
+    if params[:style].blank?
+      @musics = MUSICS
+    else
+      @musics = MUSICS.select do |id, music|
+        music[:category] == params[:style]
+      end
     end
+  end
+
+  def show
+    id = params[:id].to_i
+    @music = MUSICS[id]
+  end
+
+  def create
   end
 end
