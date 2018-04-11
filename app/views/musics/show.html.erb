@@ -1,5 +1,6 @@
-<h1><%= @music[:track]%></h1>
-<h2><%= @music[:author]%></h2>
-<p>Hello</p>
+<h2><%= @music.track %></h2>
+by <h2><%= @music.artist %></h2>
+<h3><%= @music.category %></h3>
+<p><%= @music.url %></p>
 
-<%= link_to 'Back Homepage', musics_path %>
+<%= link_to "Back to list", musics_path %>

@@ -5,6 +5,7 @@ class MusicsController < ApplicationController
   end
 
   def show
+    @music = Music.find(params[:id])
   end
 
   def new
