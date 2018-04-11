@@ -1,9 +1,9 @@
 <h1>Index de MusicsView</h1>
 
-<% @musics.each do |id, music| %>
-  <h2><%= @music.track %></h2>
-  <h2><%= @music.artist %></h2>
-  <p><%= @music.category %></p>
-<%= link_to "Viens voir", musics_path(music) %>
+<% @musics.each do |music| %>
+  <h2><%= music.track %></h2>
+  <h2><%= music.artist %></h2>
+  <p><%= music.category %></p>
+<%= link_to "Viens voir", music_path(music) %>
 <% end %>
 
