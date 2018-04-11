@@ -1,10 +1,11 @@
+<h1>Index de MusicsView</h1>
 <form action="/musics" method="get">
   <input type="text" name="style" placeholder="What kind of category?">
   <input type="submit">
 </form>
 
-<ul>
-  <% @musics.each do |id, music| %>
-    <li><%= link_to music[:track], music_path(id) %></li>
-  <% end %>
-</ul>
+<% @musics.each do |id, music| %>
+  <h2><%= music.track %></h2>
+  <h2><%= music.artist %></h2>
+  <p><%= music.category %></p>
+<% end %>
