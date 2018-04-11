@@ -9,12 +9,14 @@ class MusicsController < ApplicationController
   end
 
   def new
+    @music = Music.new
   end
 
   def create
   end
 
   def edit
+    @music = Music.find(params[:id])
   end
 
   def update

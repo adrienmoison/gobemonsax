@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   get 'contact', to: 'pages#contact', as: :contact
 
   # Create une musique
-  get 'musics', to: 'musics#new'
+  get 'musics/new', to: 'musics#new'
   post 'musics', to: 'musics#create'
 
   # Read toutes les musiques
