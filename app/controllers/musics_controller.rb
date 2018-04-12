@@ -14,8 +14,7 @@ class MusicsController < ApplicationController
   end
 
   def create
-    @music = Music.create(params[:music_params])
-    @music.save
+    Music.create(music_params)
     redirect_to musics_path
   end
 
@@ -23,7 +22,7 @@ class MusicsController < ApplicationController
   end
 
   def update
-    @music.update(params[:music_params])
+    @music.update(music_params)
     redirect_to musics_path
   end
 
@@ -39,7 +38,7 @@ class MusicsController < ApplicationController
   private
 
   def music_params
-    params.require(:restaurant).permit(:url, :track, :artist, :category)
+    params.require(:music).permit(:url, :track, :artist, :category)
   end
 
 end
