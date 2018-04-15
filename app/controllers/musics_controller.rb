@@ -15,7 +15,7 @@ class MusicsController < ApplicationController
 
   def create
     Music.create(music_params)
-    redirect_to musics_path
+    redirect_to root_path
   end
 
   def edit
@@ -23,12 +23,12 @@ class MusicsController < ApplicationController
 
   def update
     @music.update(music_params)
-    redirect_to musics_path
+    redirect_to root_path
   end
 
   def destroy
     @music.destroy
-    redirect_to musics_path
+    redirect_to root_path
   end
 
   def set_music

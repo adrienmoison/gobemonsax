@@ -3,4 +3,6 @@ by <h2><%= @music.artist %></h2>
 <h3><%= @music.category %></h3>
 <p><%= @music.url %></p>
 
-<%= link_to "Back to list", musics_path %>
+<%= link_to "Back to list", root_path %>
+<%= link_to "Edit", edit_music_path %>
+<%= link_to "Delete", root_path, method: :delete, data: { confirm: "are you sure?"} %>
