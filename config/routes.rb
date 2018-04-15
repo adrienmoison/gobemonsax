@@ -18,11 +18,10 @@ Rails.application.routes.draw do
 
   # Update une musique
   get '/:id/edit', to: 'musics#edit', as: :edit_music
-  patch 'musics/:id', to: 'musics#update'
+  patch '/:id', to: 'musics#update'
 
   # Delete une musique
   delete '/:id', to: 'musics#destroy'
-
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
