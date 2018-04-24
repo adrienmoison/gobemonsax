@@ -1,9 +1,5 @@
 Rails.application.routes.draw do
 
-  # Static pages
-  get 'about', to: 'pages#about', as: :about
-  get 'contact', to: 'pages#contact', as: :contact
-
   # Homepage
   root to: 'musics#index'
 
@@ -22,6 +18,10 @@ Rails.application.routes.draw do
 
   # Delete une musique
   delete '/:id', to: 'musics#destroy'
+
+  # Static pages
+  get 'about', to: 'pages#about', as: :about
+  get 'contact', to: 'pages#contact', as: :contact
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
